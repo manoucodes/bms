@@ -1,11 +1,11 @@
-package com.github.manoucodes.bms
+package com.github.manoucodes.api
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class BookingManagementServiceApplication
+class Application
 
 fun main(args: Array<String>) {
-	runApplication<BookingManagementServiceApplication>(*args)
+    runApplication<Application>(*args)
 }
