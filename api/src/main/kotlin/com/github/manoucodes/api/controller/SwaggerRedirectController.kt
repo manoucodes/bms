@@ -10,6 +10,7 @@ class SwaggerRedirectController {
 
     @GetMapping("/")
     fun redirectToSwagger(): String {
+
         return "redirect:$swaggerEndpoint"
     }
 }

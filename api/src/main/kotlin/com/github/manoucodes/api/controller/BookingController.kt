@@ -12,6 +12,7 @@ class BookingController {
     fun findBooking(
         @PathVariable id: Long,
     ): String {
+
         return "Booking $id"
     }
 }
