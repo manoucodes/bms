@@ -9,7 +9,5 @@ const val swaggerEndpoint = "/swagger-ui.html"
 class SwaggerRedirectController {
 
     @GetMapping("/")
-    fun redirectToSwagger(): String {
-        return "redirect:$swaggerEndpoint"
-    }
+    fun redirectToSwagger(): String = "redirect:$swaggerEndpoint"
 }

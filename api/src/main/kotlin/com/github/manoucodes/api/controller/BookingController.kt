@@ -11,7 +11,5 @@ class BookingController {
     @GetMapping("/booking/{id}")
     fun findBooking(
         @PathVariable id: Long,
-    ): String {
-        return "Booking $id"
-    }
+    ): String = "Booking: $id"
 }
