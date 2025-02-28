@@ -9,6 +9,7 @@ exclude_patterns = [
     "**/resources/**",
     "**/*.md",
     "**/*.cmd",
+    "**/*.yml",
     "mvnw",
 ]
 
