@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# <https://github.com/pinterest/ktlint> pre-commit hook
+mvn clean install
+#git diff --name-only -z --cached --relative -- '**/src/**/*.kt' | ktlint --patterns-from-stdin=''

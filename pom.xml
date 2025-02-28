@@ -155,7 +155,7 @@
                                 <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true"
                                       classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
                                     <jvmarg value="--add-opens=java.base/java.lang=ALL-UNNAMED"/>
-                                    <arg value="src/**/*.kt"/>
+                                    <arg value="**/src/**/*.kt"/>
                                 </java>
                             </target>
                         </configuration>
@@ -171,7 +171,7 @@
                                       classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
                                     <jvmarg value="--add-opens=java.base/java.lang=ALL-UNNAMED"/>
                                     <arg value="-F"/>
-                                    <arg value="src/**/*.kt"/>
+                                    <arg value="**/src/**/*.kt"/>
                                 </java>
                             </target>
                         </configuration>
