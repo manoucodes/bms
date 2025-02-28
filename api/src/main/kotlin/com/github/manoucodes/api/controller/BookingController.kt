@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api/v1/bookings")
 class BookingController {
     @GetMapping("/booking/{id}")
-    fun fetchBooking(
+    fun findBooking(
         @PathVariable id: Long,
     ): String {
         return "Booking $id"
