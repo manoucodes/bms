@@ -1,0 +1,22 @@
+version = 1
+
+test_patterns = [
+    "**/test/**"
+]
+
+exclude_patterns = [
+    ".mvn/**",
+    "**/resources/**",
+    "**/*.md",
+    "**/*.cmd",
+    "mvnw",
+]
+
+[[analyzers]]
+name = "kotlin"
+enabled = true
+
+    [analyzers.meta]
+    language_version = "1.9"
+    runtime_version = "17"
+    cyclomatic_complexity_threshold = "high"
