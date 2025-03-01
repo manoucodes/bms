@@ -1,5 +1,5 @@
 #!/bin/sh
 
-# <https://github.com/pinterest/ktlint> pre-commit hook
+# Build the project before commiting, ensures the app can build, that the tests are passing and that there
+# is no ktlint issue
 mvn clean install
-#git diff --name-only -z --cached --relative -- '**/src/**/*.kt' | ktlint --patterns-from-stdin=''
