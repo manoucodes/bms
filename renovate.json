@@ -1,6 +1,25 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ]
+  "extends": ["config:base"],
+  "automerge": false,
+  "prHourlyLimit": 5,
+  "prConcurrentLimit": 5,
+  "stabilityDays": 15, // Only propose updates if the new version has been available for at least 15 days
+  "packageRules": [
+    // Groups all minor updates in a single PR
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "All minor dependency updates"
+    },
+    // Groups springboot dependencies updates together
+    {
+      "matchPackagePatterns": ["org.springframework.*"],
+      "groupName": "Spring Boot dependencies"
+    },
+    // One PP per major update
+    {
+      "matchUpdateTypes": ["major"],
+      "groupName": "{{depName}} major update"
+    }
+  ],
+  "labels": ["dependencies", "renovate"]
 }
