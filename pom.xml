@@ -23,7 +23,8 @@
 
     <!-- Define child modules -->
     <modules>
-        <module>api</module>
+        <module>api-client</module>
+        <module>domain</module>
     </modules>
 
     <!-- Centralized dependency management -->
