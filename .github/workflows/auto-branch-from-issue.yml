@@ -1,0 +1,60 @@
+name: Auto-create branch from issue label
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  create-branch:
+    if: |
+      github.event.label.name == 'feature' ||
+      github.event.label.name == 'bugfix' ||
+      github.event.label.name == 'hotfix' ||
+      github.event.label.name == 'refactor' ||
+      github.event.label.name == 'docs' ||
+      github.event.label.name == 'test'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      issues: read
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Create branch from label
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ISSUE_TITLE="${{ github.event.issue.title }}"
+          ISSUE_NUMBER="${{ github.event.issue.number }}"
+          LABEL="${{ github.event.label.name }}"
+
+          # Base branch for different types
+          BASE="master"  # You can change this to 'develop' if needed later
+
+          PREFIX=""
+          case "$LABEL" in
+            feature)  PREFIX="feature" ;;
+            bugfix)   PREFIX="bugfix" ;;
+            hotfix)   PREFIX="hotfix" ;;
+            refactor) PREFIX="refactor" ;;
+            docs)     PREFIX="docs" ;;
+            test)     PREFIX="test" ;;
+          esac
+
+          # Sanitize branch name
+          SAFE_TITLE=$(echo "$ISSUE_TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -cd 'a-z0-9\-')
+          BRANCH_NAME="$PREFIX/issue-$ISSUE_NUMBER-${SAFE_TITLE:0:40}"
+
+          echo "Creating branch: $BRANCH_NAME from $BASE"
+
+          git fetch origin "$BASE"
+          git checkout -b "$BRANCH_NAME" origin/"$BASE"
+          git push origin "$BRANCH_NAME"
