@@ -14,12 +14,6 @@ body:
         So that [benefit].
 
   - type: textarea
-    id: notes
-    attributes:
-      label: Additional Notes
-      placeholder: Any technical notes or context
-
-  - type: textarea
     id: scenarios
     attributes:
       label: Acceptance Criteria / BDD Scenarios
