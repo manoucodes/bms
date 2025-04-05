@@ -3,12 +3,6 @@ description: Create a new feature request with BDD specs
 title: "[Feature] "
 labels: [feature]
 body:
-  - type: input
-    id: epic
-    attributes:
-      label: Epic / User Story ID (optional)
-      placeholder: e.g. BMS-123
-
   - type: textarea
     id: user_story
     attributes:
@@ -35,3 +29,9 @@ body:
           Given [setup]
           When [action]
           Then [assertions]
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      placeholder: Any technical notes or context

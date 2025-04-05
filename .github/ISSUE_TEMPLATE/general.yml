@@ -1,0 +1,33 @@
+name: General Issue
+description: Use this template for any new feature, bug, or improvement
+title: "[General] "
+labels: []
+
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue Type
+      description: What kind of issue is this?
+      options:
+        - Feature
+        - Bug
+        - Hotfix
+        - Refactor
+        - Docs
+        - Test
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief summary of the issue or request.
+      placeholder: Describe the problem, need, or context here.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      placeholder: Add any extra context or links here
