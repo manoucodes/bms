@@ -1,0 +1,32 @@
+services:
+  app:
+    container_name: bms-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/bms_db
+      SPRING_DATASOURCE_USERNAME: bms_user
+      SPRING_DATASOURCE_PASSWORD: bms_pass
+      SPRING_PROFILES_ACTIVE: dev
+    restart: unless-stopped
+
+  db:
+    image: postgres:15
+    container_name: bms-db
+    environment:
+      POSTGRES_DB: bms_db
+      POSTGRES_USER: bms_user
+      POSTGRES_PASSWORD: bms_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
