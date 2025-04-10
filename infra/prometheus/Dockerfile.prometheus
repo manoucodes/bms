@@ -1,5 +1,2 @@
 FROM prom/prometheus:latest
-# Use apt-get because this is a Debian image, not Alpine
-RUN apt-get update && apt-get install -y gettext
-COPY prometheus.template.yml /etc/prometheus/prometheus.template.yml
-ENTRYPOINT ["/bin/sh", "-c", "envsubst < /etc/prometheus/prometheus.template.yml > /etc/prometheus/prometheus.yml && /bin/prometheus --config.file=/etc/prometheus/prometheus.yml"]
+COPY prometheus-staging.yml /etc/prometheus/prometheus.yml
