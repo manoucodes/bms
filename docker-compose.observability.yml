@@ -2,10 +2,10 @@ services:
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
+    environment:
+      - TARGET_HOST=host.docker.internal:8080
     ports:
       - "9090:9090"
-    volumes:
-      - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     restart: unless-stopped
 
   grafana:
