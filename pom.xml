@@ -125,6 +125,8 @@
                         <option>all-open:annotation=jakarta.persistence.Entity</option>
                         <option>all-open:annotation=jakarta.persistence.MappedSuperclass</option>
                         <option>all-open:annotation=jakarta.persistence.Embeddable</option>
+                        <option>all-open:annotation=org.springframework.context.annotation.Configuration</option>
+                        <option>all-open:annotation=org.springframework.stereotype.Component</option>
                     </pluginOptions>
                 </configuration>
                 <executions>
