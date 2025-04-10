@@ -1,4 +1,4 @@
-name: Build and Dockerize on master
+name: Build, Test and Deploy
 
 on:
   push:
