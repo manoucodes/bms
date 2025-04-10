@@ -1,0 +1,31 @@
+name: Build and Dockerize on master
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Set up Maven
+        run: chmod +x ./mvnw
+
+      - name: Build with Maven
+        run: ./mvnw clean package -pl api-client -am -DskipTests
+
+      - name: Build Docker image
+        run: docker build -t bms-app:ci -f Dockerfile .
