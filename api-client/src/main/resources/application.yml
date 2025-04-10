@@ -1,2 +1,8 @@
 server:
   port: 8085
+
+springdoc:
+  swagger-ui:
+    try-it-out-enabled: true
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json

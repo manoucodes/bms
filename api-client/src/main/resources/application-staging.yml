@@ -20,3 +20,6 @@ management:
       show-details: always
     prometheus:
       enabled: true
+
+springdoc:
+  server-url: https://bms-staging.up.railway.app
