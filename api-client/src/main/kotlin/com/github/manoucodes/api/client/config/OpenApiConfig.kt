@@ -1,4 +1,4 @@
-package com.github.manoucodes.api.config
+package com.github.manoucodes.api.client.config
 
 import io.swagger.v3.oas.models.OpenAPI
 import io.swagger.v3.oas.models.info.Info
@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Profile
 
 @Profile("staging")
 @Configuration
-open class OpenApiConfig {
+class OpenApiConfig {
     @Bean
-    open fun customOpenAPI(): OpenAPI =
+    fun customOpenAPI(): OpenAPI =
         OpenAPI()
             .info(
                 Info()

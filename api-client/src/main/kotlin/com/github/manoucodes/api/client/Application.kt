@@ -1,4 +1,4 @@
-package com.github.manoucodes.api
+package com.github.manoucodes.api.client
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
