@@ -1,8 +1,8 @@
 package com.github.manoucodes.domain.model.user
 
-import java.util.UUID
+import java.util.*
 
 @JvmInline
 value class UserId(
-    val value: UUID,
+    val value: UUID
 )
