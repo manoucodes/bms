@@ -1,4 +1,4 @@
-package com.github.manoucodes.api.config
+package com.github.manoucodes.api.client.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
