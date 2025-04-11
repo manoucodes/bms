@@ -1,4 +1,4 @@
-package com.github.manoucodes.domain.booking
+package com.github.manoucodes.domain.model.booking
 
 import java.util.UUID
 

@@ -1,6 +1,6 @@
-package com.github.manoucodes.domain.availability
+package com.github.manoucodes.domain.model.availability
 
-import com.github.manoucodes.domain.staff.StafferId
+import com.github.manoucodes.domain.model.staff.StafferId
 import java.time.LocalDateTime
 
 interface AvailabilitySlotRepository {

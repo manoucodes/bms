@@ -1,7 +1,7 @@
-package com.github.manoucodes.domain.booking
+package com.github.manoucodes.domain.model.booking
 
-import com.github.manoucodes.domain.staff.StafferId
-import com.github.manoucodes.domain.user.UserId
+import com.github.manoucodes.domain.model.staff.StafferId
+import com.github.manoucodes.domain.model.user.UserId
 import java.time.LocalDateTime
 
 interface BookingRepository {

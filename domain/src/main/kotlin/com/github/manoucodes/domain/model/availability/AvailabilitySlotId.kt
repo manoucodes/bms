@@ -1,4 +1,4 @@
-package com.github.manoucodes.domain.availability
+package com.github.manoucodes.domain.model.availability
 
 import java.util.UUID
 

@@ -1,4 +1,6 @@
-package com.github.manoucodes.domain.user
+package com.github.manoucodes.domain.model.user
+
+import com.github.manoucodes.domain.user.Email
 
 interface UserRepository {
     fun findById(id: UserId): User?

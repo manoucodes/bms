@@ -1,6 +1,6 @@
-package com.github.manoucodes.domain.service
+package com.github.manoucodes.domain.model.service
 
-import com.github.manoucodes.domain.business.BusinessId
+import com.github.manoucodes.domain.model.business.BusinessId
 
 interface ServiceRepository {
     fun findById(id: ServiceId): Service?

@@ -1,4 +1,4 @@
-package com.github.manoucodes.domain.business
+package com.github.manoucodes.domain.model.business
 
 interface BusinessRepository {
     fun findById(id: BusinessId): Business?

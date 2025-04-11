@@ -1,4 +1,4 @@
-package com.github.manoucodes.domain.business
+package com.github.manoucodes.domain.model.business
 
 import java.util.UUID
 

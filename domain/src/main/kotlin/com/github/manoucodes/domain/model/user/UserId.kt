@@ -1,4 +1,4 @@
-package com.github.manoucodes.domain.user
+package com.github.manoucodes.domain.model.user
 
 import java.util.UUID
 

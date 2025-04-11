@@ -1,7 +1,7 @@
-package com.github.manoucodes.domain.staff
+package com.github.manoucodes.domain.model.staff
 
-import com.github.manoucodes.domain.business.BusinessId
-import com.github.manoucodes.domain.user.UserId
+import com.github.manoucodes.domain.model.business.BusinessId
+import com.github.manoucodes.domain.model.user.UserId
 
 interface StafferRepository {
     fun findById(id: StafferId): Staffer?

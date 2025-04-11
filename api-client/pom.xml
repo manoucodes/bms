@@ -84,6 +84,11 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
             </plugin>
 
+            <!-- Test runner -->
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+
             <!-- Spring Boot Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>

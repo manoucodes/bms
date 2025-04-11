@@ -1,4 +1,4 @@
-package com.github.manoucodes.domain.user
+package com.github.manoucodes.domain.model.user
 
 @JvmInline
 value class Phone(
