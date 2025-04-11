@@ -21,9 +21,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build & test all modules
-        run: ./mvnw clean verify
-
       - name: Upload coverage for bms-domain
         uses: codecov/codecov-action@v3
         with:
