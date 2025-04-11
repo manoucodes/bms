@@ -28,6 +28,7 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           files: domain/target/site/jacoco/jacoco.xml
+          fail_ci_if_error: true
           flags: bms-domain
           name: domain-coverage
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -36,6 +37,7 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           files: application/target/site/jacoco/jacoco.xml
+          fail_ci_if_error: true
           flags: bms-application
           name: application-coverage
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -44,6 +46,7 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           files: api-client/target/site/jacoco/jacoco.xml
+          fail_ci_if_error: true
           flags: bms-api-client
           name: api-client-coverage
           token: ${{ secrets.CODECOV_TOKEN }}
