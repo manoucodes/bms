@@ -22,10 +22,17 @@ Follows a hexagonal architecture to ensure separation of concerns and easy testa
 
 ## Getting Started
 
-### Prerequisites
-- Java 17+
-- Docker & Docker Compose
-- Maven (or use `./mvnw`)
+### Environment setup
+- Use Java 17+
+- Install Docker & Docker Compose
+- Set up githooks to activate the pre-push hook
+```bash
+./setup-hooks.sh
+```
+- Install ktlint to be able to format code
+```bash
+ktlint --format
+```
 
 ### Build and run
 ```bash
