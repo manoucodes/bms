@@ -25,7 +25,7 @@ jobs:
           sudo mv ktlint /usr/local/bin/
 
       - name: Run ktlint via ReviewDog
-        uses: reviewdog/action-cli@v1.18.0
+        uses: reviewdog/action-cli@master
         with:
           name: ktlint
           tool_name: ktlint
@@ -36,7 +36,7 @@ jobs:
           script: ktlint --relative .
 
       - name: Run detekt via ReviewDog
-        uses: reviewdog/action-cli@v1.18.0
+        uses: reviewdog/action-cli@master
         with:
           name: detekt
           tool_name: detekt
