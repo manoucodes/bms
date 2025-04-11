@@ -8,42 +8,19 @@ jobs:
     name: ktlint + detekt
     runs-on: ubuntu-latest
 
+    env:
+      REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Set up JDK
-        uses: actions/setup-java@v4
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          fetch-depth: 1
 
-      - name: Install ktlint
-        run: |
-          curl -sSLO https://github.com/pinterest/ktlint/releases/download/1.2.1/ktlint
-          chmod +x ktlint
-          sudo mv ktlint /usr/local/bin/
-
-      - name: Run ktlint via ReviewDog
-        uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893
+      - name: ktlint
+        uses: ScaCap/action-ktlint@master
         with:
-          reviewdog_version: latest
-          name: ktlint
-          tool_name: ktlint
+          github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
-          filter_mode: diff_context
-          fail_on_error: false
-          level: warning
-          script: ktlint --relative .
-
-      - name: Run detekt via ReviewDog
-        uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893
-        with:
-          reviewdog_version: latest
-          name: detekt
-          tool_name: detekt
-          reporter: github-pr-review
-          filter_mode: diff_context
-          fail_on_error: false
-          level: warning
-          script: ./mvnw detekt:check
+          level: 'warning'
+          fail_on_error: 'false'
