@@ -8,7 +8,7 @@ value class Email(
         require(value.isNotBlank()) { "Email cannot be blank" }
 
         require(value.matches(Regex("^[^@\\s]+@[^@\\s]+\\.[^@\\s]{2,}$"))) {
-                    "Invalid email format: $value"
+            "Invalid email format: $value"
         }
     }
 
