@@ -15,6 +15,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Build & test all modules
+        run: ./mvnw verify -Dskip.antrun=true
+
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
