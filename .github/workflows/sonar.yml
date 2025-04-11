@@ -41,6 +41,9 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \ 
+        run: ./mvnw sonar:sonar \
           -Dsonar.projectKey=manoucodes_bms \
+          -Dsonar.organization=manoucodes \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
           -Dsonar.exclusions=**/config/**,**/Application.kt
