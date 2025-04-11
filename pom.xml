@@ -27,6 +27,8 @@
     <modules>
         <module>api-client</module>
         <module>domain</module>
+        <module>application</module>
+        <module>infrastructure</module>
     </modules>
 
     <!-- Centralized dependency management -->
@@ -103,6 +105,30 @@
 
     <!-- Plugins -->
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>0.8.11</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>report</id>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
         <plugins>
             <!-- Spring Boot Plugin -->
             <plugin>
@@ -208,5 +234,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
