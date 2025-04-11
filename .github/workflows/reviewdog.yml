@@ -40,7 +40,7 @@ jobs:
           script: ktlint --relative .
 
       - name: Run detekt via ReviewDog
-        uses: reviewdog/action-setup@e04ffabe3898a0af8d0fb1af00c188831c4b5893
+        uses: reviewdog/action-cli@e04ffabe3898a0af8d0fb1af00c188831c4b5893
         with:
           reviewdog_version: latest
           name: detekt
