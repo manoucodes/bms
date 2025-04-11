@@ -25,7 +25,7 @@ jobs:
         run: ./mvnw clean verify
 
       - name: Upload coverage for bms-domain
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
           files: domain/target/site/jacoco/jacoco.xml
           flags: bms-domain
@@ -33,7 +33,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Upload coverage for bms-application
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
           files: application/target/site/jacoco/jacoco.xml
           flags: bms-application
@@ -41,7 +41,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Upload coverage for bms-api
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
           files: api-client/target/site/jacoco/jacoco.xml
           flags: bms-api-client
