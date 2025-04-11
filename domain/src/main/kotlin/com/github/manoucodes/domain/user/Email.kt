@@ -2,13 +2,13 @@ package com.github.manoucodes.domain.user
 
 @JvmInline
 value class Email(
-    val value: String
+    val value: String,
 ) {
     init {
         require(value.isNotBlank()) { "Email cannot be blank" }
 
         require(value.matches(Regex("^[^@\\s]+@[^@\\s]+\\.[^@\\s]{2,}$"))) {
-                "Invalid email format: $value"
+            "Invalid email format: $value"
         }
     }
 
