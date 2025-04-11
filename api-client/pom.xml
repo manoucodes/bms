@@ -95,7 +95,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
                 <configuration>
-                    <mainClass>com.github.manoucodes.api.ApplicationKt</mainClass>
+                    <mainClass>com.github.manoucodes.api.client.ApplicationKt</mainClass>
                 </configuration>
                 <executions>
                     <execution>

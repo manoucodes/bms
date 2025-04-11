@@ -1,6 +1,6 @@
 [![Build](https://github.com/manoucodes/bms/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/manoucodes/bms/actions/workflows/release.yml)
 
-[![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=manoucodes_bms&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=manoucodes_bms) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=manoucodes_bms&metric=coverage)](https://sonarcloud.io/summary/new_code?id=manoucodes_bms) [![Maintainability](https://sonarcloud.io/api/project_badges/measure?project=manoucodes_bms&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=manoucodes_bms)
+[![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=manoucodes_bms&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=manoucodes_bms) [![Maintainability](https://sonarcloud.io/api/project_badges/measure?project=manoucodes_bms&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=manoucodes_bms)
 
 [![codecov](https://codecov.io/gh/manoucodes/bms/graph/badge.svg?token=0G499NPO3R)](https://codecov.io/gh/manoucodes/bms)
 
