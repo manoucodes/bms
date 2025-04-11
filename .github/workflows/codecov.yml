@@ -1,0 +1,49 @@
+name: Code Coverage
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build & test all modules
+        run: ./mvnw clean verify
+
+      - name: Upload coverage for bms-domain
+        uses: codecov/codecov-action@v3
+        with:
+          files: domain/target/site/jacoco/jacoco.xml
+          flags: bms-domain
+          name: domain-coverage
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload coverage for bms-application
+        uses: codecov/codecov-action@v3
+        with:
+          files: application/target/site/jacoco/jacoco.xml
+          flags: bms-application
+          name: application-coverage
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload coverage for bms-api
+        uses: codecov/codecov-action@v3
+        with:
+          files: api-client/target/site/jacoco/jacoco.xml
+          flags: bms-api-client
+          name: api-client-coverage
+          token: ${{ secrets.CODECOV_TOKEN }}
