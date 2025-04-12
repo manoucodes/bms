@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 
 class EmailTest {
-//    @Test
-//    fun `GIVEN a valid email THEN an email is created`() {
-//        val email = Email("User@Example.com")
-//        assertEquals("User@Example.com", email.value)
-//        assertEquals("user@example.com", email.toString())
-//    }
+    @Test
+    fun `GIVEN a valid email THEN an email is created`() {
+        val email = Email("User@Example.com")
+        assertEquals("User@Example.com", email.value)
+        assertEquals("user@example.com", email.toString())
+    }
 
     @Test
     fun `GIVEN a blank email THEN an exception is thrown`() {
