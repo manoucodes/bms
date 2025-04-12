@@ -15,14 +15,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Build & test all modules
+        run: ./mvnw verify -Dskip.antrun=true
+
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
-
-      - name: Build & test all modules
-        run: ./mvnw clean verify
 
       - name: Upload coverage for bms-domain
         uses: codecov/codecov-action@v3
@@ -43,7 +43,7 @@ jobs:
       - name: Upload coverage for bms-api
         uses: codecov/codecov-action@v4
         with:
-          files: api-client/target/site/jacoco/jacoco.xml]
+          files: api-client/target/site/jacoco/jacoco.xml
           flags: bms-api-client
           name: api-client-coverage
           token: ${{ secrets.CODECOV_TOKEN }}
