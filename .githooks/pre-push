@@ -2,4 +2,4 @@
 
 # Build the project before commiting, ensures the app can build, that the tests are passing and that there
 # is no ktlint issue
-mvn clean install
+mvn verify
