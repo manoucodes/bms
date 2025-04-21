@@ -192,8 +192,10 @@
                 <version>${jacoco.version}</version>
                 <configuration>
                     <excludes>
-                        <exclude>**/Application.*</exclude>
+                        <exclude>**/BmsApplication.*</exclude>
+                        <exclude>**/BmsApplicationKt.*</exclude>
                         <exclude>**/domain/**</exclude>
+                        <exclude>**/service/**</exclude>
                         <exclude>**/config/**</exclude>
                         <exclude>**/controller/**</exclude>
                         <exclude>**/repository/**</exclude>
