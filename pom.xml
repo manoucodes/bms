@@ -25,7 +25,7 @@
         <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
         <ktlint.version>1.5.0</ktlint.version>
         <postgresql.version>42.5.1</postgresql.version>
-        <mockk.version>1.13.10</mockk.version>
+        <mockk.version>1.9.3</mockk.version>
 
         <!-- Plugins -->
         <jacoco.version>0.8.11</jacoco.version>
@@ -111,7 +111,7 @@
         <dependency>
             <groupId>io.mockk</groupId>
             <artifactId>mockk</artifactId>
-            <version>1.13.10</version>
+            <version>${mockk.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -195,7 +195,6 @@
                         <exclude>**/BmsApplication.*</exclude>
                         <exclude>**/BmsApplicationKt.*</exclude>
                         <exclude>**/domain/**</exclude>
-                        <exclude>**/service/**</exclude>
                         <exclude>**/config/**</exclude>
                         <exclude>**/controller/**</exclude>
                         <exclude>**/repository/**</exclude>

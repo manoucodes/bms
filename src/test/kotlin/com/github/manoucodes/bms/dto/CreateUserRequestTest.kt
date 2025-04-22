@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test
 class CreateUserRequestTest {
     private lateinit var validator: Validator
 
+    private val role = "ADMIN"
+
     @BeforeEach
     fun setUp() {
         validator = Validation.buildDefaultValidatorFactory().validator
@@ -21,7 +23,7 @@ class CreateUserRequestTest {
             CreateUserRequest(
                 name = "John Doe",
                 email = "john@example.com",
-                role = "ADMIN",
+                role = role,
             )
 
         val violations = validator.validate(request)
@@ -35,7 +37,7 @@ class CreateUserRequestTest {
             CreateUserRequest(
                 name = "",
                 email = "john@example.com",
-                role = "ADMIN",
+                role = role,
             )
 
         val violations = validator.validate(request)
@@ -52,7 +54,7 @@ class CreateUserRequestTest {
             CreateUserRequest(
                 name = "Jane",
                 email = "not-an-email",
-                role = "ADMIN",
+                role = role,
             )
 
         val violations = validator.validate(request)

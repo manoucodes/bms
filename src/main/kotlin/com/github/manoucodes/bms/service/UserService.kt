@@ -10,6 +10,5 @@ import org.springframework.stereotype.Service
 class UserService(
     private val userRepository: UserRepository,
 ) {
-    // TODO - ES - add tests
     fun createUser(userRequest: CreateUserRequest): User = userRepository.save(userRequest.toUser())
 }
