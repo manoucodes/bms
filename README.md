@@ -37,7 +37,7 @@ ktlint --format
 ### Build and run
 ```bash
 ./mvnw clean install
-./mvnw -pl api-client spring-boot:run -Dspring-boot.run.profiles=dev
+./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
 ### Run app with docker

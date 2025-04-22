@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Validates the project before commiting, ensures there is no ktlint issue.
+# Does not check the compile, build or tests.
+mvn validate
