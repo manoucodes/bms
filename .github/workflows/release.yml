@@ -25,17 +25,17 @@ jobs:
         run: chmod +x ./mvnw
 
       - name: Build with Maven
-        run: ./mvnw clean package -pl api-client -am -DskipTests
+        run: ./mvnw clean package -DskipTests
 
       - name: Build Docker image
         run: docker build -t bms-app:ci -f Dockerfile .
 
-      - name: Install Railway CLI
-        run: curl -fsSL https://railway.app/install.sh | sh
-        shell: bash
+#      - name: Install Railway CLI
+#        run: curl -fsSL https://railway.app/install.sh | sh
+#        shell: bash
 
-      - name: Deploy to Railway
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: |
-          railway up --service bms
+#      - name: Deploy to Railway
+#        env:
+#          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+#        run: |
+#          railway up --service bms
