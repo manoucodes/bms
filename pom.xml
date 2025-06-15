@@ -21,15 +21,15 @@
         <!-- Dependencies -->
         <java.version>17</java.version>
         <kotlin.version>1.9.25</kotlin.version>
-        <springdoc.version>2.5.0</springdoc.version>
+        <springdoc.version>2.8.8</springdoc.version>
         <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
-        <ktlint.version>1.5.0</ktlint.version>
+        <ktlint.version>1.6.0</ktlint.version>
         <postgresql.version>42.5.1</postgresql.version>
-        <mockk.version>1.9.3</mockk.version>
+        <mockk.version>1.14.2</mockk.version>
 
         <!-- Plugins -->
-        <jacoco.version>0.8.11</jacoco.version>
-        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+        <jacoco.version>0.8.13</jacoco.version>
+        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
 
         <!-- Other ...-->
         <sonar.organization>manoucodes</sonar.organization>
@@ -104,7 +104,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.10.0</version>
+            <version>5.13.0</version>
             <scope>test</scope>
         </dependency>
         <!-- Mocking library for Kotlin (better than Mockito in Kotlin) -->
