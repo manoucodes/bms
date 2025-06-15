@@ -3,7 +3,7 @@ WORKDIR /build
 COPY . .
 RUN mvn clean package -DskipTests -X
 
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:17.0.14_7-jdk
 WORKDIR /app
 COPY --from=builder /build/target/*.jar app.jar
 EXPOSE 8080
